@@ -132,7 +132,7 @@ void setOwners(char *path, int owner, int group)
 
 void init_alarm_boot_properties()
 {
-    char *alarm_file = "/proc/sys/kernel/boot_reason";
+    char const *alarm_file = "/proc/sys/kernel/boot_reason";
     char buf[BUF_SIZE];
 
     if(read_file2(alarm_file, buf, sizeof(buf))) {
