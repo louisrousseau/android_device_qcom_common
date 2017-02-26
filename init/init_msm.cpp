@@ -250,7 +250,7 @@ static int check_rlim_action()
     char pval[PROP_VALUE_MAX];
     int rc;
     struct rlimit rl;
-    rc = property_get("persist.debug.trace",pval);
+    rc = property_get("persist.debug.trace", pval, "1");
 
     if(rc && (strcmp(pval,"1") == 0)) {
         rl.rlim_cur = RLIM_INFINITY;
